@@ -85,10 +85,8 @@ Do the following:
 
 function dogYears(dogAge) {
   var humAge = 7 * dogAge;
-  console.log(`human age is ${humAge}`);
+  return humAge;
 }
-
-dogYears(2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -120,7 +118,7 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(weight, age) {
   if (age >= 1 && weight <= 5) {
     return weight * 0.05;
-  } else if ((age >= 1 && weight >= 6 && weight, +10)) {
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
     return weight * 0.04;
   } else if (age >= 1 && weight >= 11 && weight <= 15) {
     return weight * 0.03;
@@ -160,8 +158,20 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer) {
-  /*add your code here*/
+let computerChoice = Math.random();
+
+if (computerChoice <= 0.34) {
+  computerChoice = "Rock";
+} else if (computerChoice <= 0.67) {
+  computerChoice = "Paper";
+} else {
+  computerChoice = "Scissors";
+}
+
+function game(user, computerChoice) {
+  if (user === computerChoice) {
+    return "it's a tie";
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
